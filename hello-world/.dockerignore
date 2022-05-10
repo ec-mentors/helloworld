@@ -1,0 +1,6 @@
+.mvn/
+docs/
+.gitignore
+Dockerfile*
+
+# target/

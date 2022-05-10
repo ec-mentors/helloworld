@@ -1,0 +1,12 @@
+FROM openjdk:16-jdk-alpine
+
+# add metadata, e.g. version and author
+LABEL version="1.0"
+LABEL org.opencontainers.image.authors="anne.muster@company.com"
+
+# use RUN to add required libraries
+RUN apk add curl
+
+COPY target/*.jar app.jar
+
+ENTRYPOINT ["java","-jar","/app.jar"]
